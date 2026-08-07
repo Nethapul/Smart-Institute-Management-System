@@ -1,22 +1,21 @@
-// Load environment variables
-require("dotenv").config();
-
-
-// Load Sequelize model relationships
-require("./models/associations");
-
-
-// Load Express application
 const app = require("./app");
+const sequelize = require("./config/database");
+
+require("./models");
+
+const PORT = process.env.PORT || 5000;
 
 
-// Server Port
-const PORT = process.env.PORT || 3000;
+sequelize.sync({ alter: true })
+.then(() => {
 
+    console.log("✅ Database synced");
 
-// Start Server
-app.listen(PORT, () => {
-  console.log("=================================");
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log("=================================");
+    app.listen(PORT, () => {
+        console.log(`🚀 Server running on port ${PORT}`);
+    });
+
+})
+.catch((error)=>{
+    console.log("❌ Database sync failed:", error);
 });

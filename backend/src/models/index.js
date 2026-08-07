@@ -19,21 +19,21 @@ const Leave = require("./Leave");
 
 
 module.exports = {
-  sequelize,
-  User,
-  Institute,
-  Student,
-  Teacher,
-  Parent,
-  Class,
-  Subject,
-  Attendance,
-  Exam,
-  Payment,
-  Notification,
-  NFC,
-  Document,
-  Timetable,
-  Result,
-  Leave
+    sequelize,
+    User,
+    Institute,
+    Student,
+    Teacher,
+    Parent,
+    Class,
+    Subject,
+    Attendance,
+    Exam,
+    Payment,
+    Notification,
+    NFC,
+    Document,
+    Timetable,
+    Result,
+    Leave
 };
