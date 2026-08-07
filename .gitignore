@@ -1,7 +1,5 @@
 # Node modules
 node_modules/
-
-# Backend
 backend/node_modules/
 
 # Environment files
@@ -11,5 +9,9 @@ backend/.env
 # Logs
 *.log
 
-# Mac files
-.DS_Storebackend/.env
+# macOS
+.DS_Store
+
+# Upload folders
+uploads/
+backend/uploads/
